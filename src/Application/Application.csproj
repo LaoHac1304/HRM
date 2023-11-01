@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>hrOT.Application</RootNamespace>
+        <AssemblyName>hrOT.Application</AssemblyName>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="AnnualWorkingDays\Commands\**" />
+      <Compile Remove="SalaryCalculators\Queries\**" />
+      <Compile Remove="Skill_JD\**" />
+      <EmbeddedResource Remove="AnnualWorkingDays\Commands\**" />
+      <EmbeddedResource Remove="SalaryCalculators\Queries\**" />
+      <EmbeddedResource Remove="Skill_JD\**" />
+      <None Remove="AnnualWorkingDays\Commands\**" />
+      <None Remove="SalaryCalculators\Queries\**" />
+      <None Remove="Skill_JD\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+        <PackageReference Include="EPPlus" Version="6.2.4" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
+        <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+        <PackageReference Include="MailKit" Version="4.0.0" />
+
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+        <PackageReference Include="SixLabors.ImageSharp" Version="3.0.1" />
+        <PackageReference Include="SixLabors.ImageSharp.Web" Version="3.0.1" />
+        <PackageReference Include="MimeKit" Version="4.0.0" />
+        <PackageReference Include="SonPhat.VietnameseCalendar" Version="1.0.1" />
+        <PackageReference Include="System.Globalization" Version="4.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Domain\Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Auth\Commands\" />
+    </ItemGroup>
+
+</Project>
